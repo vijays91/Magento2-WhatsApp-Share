@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Whatsappshare
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vijaystore" translate="label" sortOrder="180">
+            <label>Vijay</label>
+        </tab>
+        <section id="whatsappshare_tab" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>WhatsApp Share</label>
+            <tab>vijaystore</tab>
+            <resource>Learn_Whatsappshare::whatsappshare_configuration</resource>
+            <group id="whatsappshare_setting" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>WhatsApp Share Setting</label>
+                <field id="whatsappshare_active" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WhatsApp Share Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[ ]]></comment>
+                </field>
+                <field id="whatsappshare_size" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WhatsApp Share Button Size</label>
+                    <source_model>Learn\Whatsappshare\Model\Source\Size</source_model>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[ ]]></comment>
+                    <depends>
+                        <field id="*/*/whatsappshare_active">1</field>
+                    </depends>
+                </field>
+                <field id="whatsappshare_text" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>WhatsApp Share Text</label>
+                    <validate>required-entry</validate>
+                    <comment><![CDATA[ ]]></comment>
+                    <depends>
+                        <field id="*/*/whatsappshare_active">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author VIJAYAKUMAR S
+ * @copyright Copyright (c) 2018
+ * @package Learn_Whatsappshare
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Learn_Whatsappshare::css/whatsappshare/whatsappshare.css" />
+	</head>
+	<body>
+		<referenceContainer name="alert.urls">
+			<block class="Learn\Whatsappshare\Block\Whatsappshare" name="whatsapp.share" as="whatsappshare" after="-" template="catalog/product/view/whatsappshare.phtml" />
+		</referenceContainer>
+	</body>
+</page>

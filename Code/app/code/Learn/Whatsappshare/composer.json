@@ -1,0 +1,20 @@
+{
+    "name": "learn/whatsappshare",
+    "description": "This extension used to share the product information on whatsapp available at product page.",
+    "require": {
+        "php": "7.0.2|7.0.4|~7.0.6|~7.1.0"
+    },
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Learn\\Whatsappshare\\": ""
+        }
+    }
+}
